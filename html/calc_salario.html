@@ -47,23 +47,30 @@
                 <div class="calc_main">
                     <div class="calc_text">
                         <h2>Salario Liquido</h2>
-                        <p>O salário líquido é a remuneração que um trabalhador por conta de outrem recebe depois de serem feitos os descontos legalmente obrigatórios ao valor bruto, <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/tabela_ret_doclib/Pages/default.aspx" target="_blank">consulte aqui as tabelas de retenção.</a></p>
+                        <p>O salário líquido é a remuneração que um trabalhador por conta de outrem recebe depois de serem feitos os descontos legalmente obrigatórios ao valor bruto, <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/tabela_ret_doclib/Pages/default.aspx" target="_blank">consulte aqui as tabelas de retenção do IRS.</a></p>
                     </div>
                     <form class="form">
                         <div class="form_input_div">
                             <div class="form_input_label">
-                                <label class="form_label" for="remuneracao">Remuneração Mensal (euros): </label>
-                                <input id="remuneracao" class="form_text_input" type="number" step="0.01" min="0" required>
+                                <label class="form_label" for="remuneracao">Remuneração Mensal (euros): </label><br>
+                                <input id="remuneracao" class="form_text_input" type="number" step="0.01" min="0" required onchange="calcularSalario()">
                             </div>
                             <div class="form_input_label">
-                                <label class="form_label" for="retencao">Percentagem Retida: </label>
-                                <input id="retencao" class="form_text_input" type="number" step="0.01" min="0" required>
+                                <label class="form_label" for="perIRS">Percentagem de IRS: </label><br>
+                                <input id="perIRS" class="form_text_input" type="number" step="0.01" min="0" required onchange="calcularSalario()">
+                            </div>
+                            <div class="form_input_label">
+                                <label class="form_label" for="perSS">Percentagem de Segurança Social: </label><br>
+                                <input id="perSS" class="form_text_input" type="number" step="0.01" min="0" required value="11" onchange="calcularSalario()">
                             </div>
                         </div>
                         <div class="form_output_div">
                             <p class="output" id="output">Output</p>
                         </div>
                     </form>
+                    <div class="form_validation">
+                        <p>Mensagem de Erro</p>
+                    </div>
                 </div>
                 <div class="calc_nav">
                     <div>

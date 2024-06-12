@@ -1,9 +1,3 @@
-//Função de validação de input
-function validation() {
-
-}
-
-
 // Função para calcular o IMI
 function calcularIMI() {
     let valorPatrimonial = parseFloat(document.getElementById("valorPatrimonial").value);
@@ -32,11 +26,10 @@ function calcularEuribor() {
 
 // Função para calcular a Taxa de Esforço
 function calcularTaxaDeEsforço() {
-    var prestacoes = parseFloat(document.getElementById("prestacoes").value);
-    var rendimento = parseFloat(document.getElementById("rendimento").value);
-    var taxaDeEsforco = (prestacoes / rendimento) * 100;
+    let prestacoes = parseFloat(document.getElementById("prestacoes").value);
+    let rendimento = parseFloat(document.getElementById("rendimento").value);
 
-    document.getElementById("output").innerText = taxaDeEsforco.toFixed(2) + "%";
+    document.getElementById("output").innerText =( (prestacoes / rendimento) * 100).toFixed(2) + "%";
 }
 
 
@@ -51,8 +44,16 @@ function calcularMaisValias() {
 
 // Função para calcular o Salario Liquido
 function calcularSalario() {
-    
-    
+    let remuneracao = parseFloat(document.getElementById("remuneracao").value);
+    let valorIRS = parseFloat(document.getElementById("perIRS").value);
+    let valorSS = parseFloat(document.getElementById("perSS").value);
+
+    let irs = parseFloat(remuneracao * (valorIRS / 100));
+    let ss = parseFloat(remuneracao * (valorSS / 100));
+
+    let output = (remuneracao - (valorIRS + valorSS)).toFixed(2)
+
+    document.getElementById("output").innerText = output + "€";
 }
 
 

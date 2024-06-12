@@ -430,11 +430,11 @@ p{
 
 .form{
     width: 90%;
-    height: 20vh;
+    height: 40vh;
 
     display: flex;
     padding: 1em;
-    margin: 3em auto;
+    margin: 3em auto 0 auto;
     background-color: var(--secondary-color);
     border: 2px solid var(--primary-color);
     color: var(--light-color);
@@ -448,12 +448,14 @@ p{
 }
 
 .form_input_label{
+    display: block;
     margin: 1em 0 2em 1em;
 }
 
 .form_label{
     font-size: 1.5em;
     font-weight: bold;
+    margin: 0 0 .5em 1em;
 }
 
 .form_text_input{
@@ -468,7 +470,7 @@ p{
 
 .form_text_input:focus{
     outline: 0;
-    border: 2px solid var(--dark-color);
+    border: 2px solid var(--secondary-color-light);
 }
 
 .form_output_div{
@@ -477,8 +479,23 @@ p{
 }
 
 .output{
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary-color);
     margin-left: 1em;
     font-size: 3em;
+}
+
+.form_validation{
+    width: 90%;
+    height: 8vh;
+
+    display: flex;
+    padding: 1em;
+    margin: 0 auto 3em auto;
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-top: 0;
+    color: var(--light-color);
 }
 
 /* Responsividade*/
