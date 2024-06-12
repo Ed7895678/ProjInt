@@ -11,7 +11,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../css/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../css/favicon/favicon-16x16.png">
     <link rel="manifest" href="../css/favicon/site.webmanifest">
-</head>
+
+    <script src="../js/logic.js"></script>
 <body>
     <div>
         <header class="header">
@@ -46,18 +47,29 @@
                 <div class="calc_main">
                     <div class="calc_text">
                         <h2>Salario Liquido</h2>
-                        <p>O salário líquido é a remuneração que um trabalhador por conta de outrem recebe depois de serem feitos os descontos legalmente obrigatórios ao valor bruto</p>
+                        <p>O salário líquido é a remuneração que um trabalhador por conta de outrem recebe depois de serem feitos os descontos legalmente obrigatórios ao valor bruto, <a href="https://info.portaldasfinancas.gov.pt/pt/apoio_contribuinte/tabela_ret_doclib/Pages/default.aspx" target="_blank">consulte aqui as tabelas de retenção.</a></p>
                     </div>
-                    <div class="calc_form_div">
-                        <form class="calc_form">
-
-                        </form>
-                    </div>
+                    <form class="form">
+                        <div class="form_input_div">
+                            <div class="form_input_label">
+                                <label class="form_label" for="remuneracao">Remuneração Mensal (euros): </label>
+                                <input id="remuneracao" class="form_text_input" type="number" step="0.01" min="0" required>
+                            </div>
+                            <div class="form_input_label">
+                                <label class="form_label" for="retencao">Percentagem Retida: </label>
+                                <input id="retencao" class="form_text_input" type="number" step="0.01" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form_output_div">
+                            <p class="output" id="output">Output</p>
+                        </div>
+                    </form>
                 </div>
                 <div class="calc_nav">
                     <div>
                         <h3>Outras Calculadoras</h3>
                         <ul class="calc_ul">
+                            <li class="calc_li"><a href="calc_imi.html">IMI</a></li>
                             <li class="calc_li"><a href="calc_juros.html">Juros Compostos</a></li>
                             <li class="calc_li"><a href="calc_pensao.html">Pensão Liquida</a></li>
                             <li class="calc_li"><a href="calc_euribor.html">Variação Euribor</a></li>

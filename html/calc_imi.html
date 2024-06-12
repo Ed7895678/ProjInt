@@ -11,6 +11,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../css/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../css/favicon/favicon-16x16.png">
     <link rel="manifest" href="../css/favicon/site.webmanifest">
+
+    <script src="../js/logic.js"></script>
 </head>
 <body>
     <div>
@@ -50,50 +52,24 @@
                         <p>A taxa é estipulada anualmente por cada município dentro dos tetos máximos e mínimos definidos pelo Governo.</p>
                         <p>Dependendo do municipio, podem-se aplicar deduções fixas para agregados com dependentes. <a href="https://www.portaldasfinancas.gov.pt/pt/main.jsp?body=/imi/consultarTaxasIMIForm.jsp" target="_blank">Consulte a sua taxa de IMI aqui.</a></p>
                     </div>
-                    <div>
-                        <form class="form">
-                            <div class="form_initial_opt">
-                                <p>Escolha uma opção de input:</p>
-                                <div class="form_radio_div">
-                                    <div class="form_ind_radio_div">
-                                        <label class="form_label" for="taxa_opt">Taxa</label>
-                                        <input id="taxa_opt" class="form_radio" type="radio" name="initial_opt" checked>
-                                    </div>
-                                    <div class="form_ind_radio_div">
-                                        <label class="form_label" for="muni_opt">Municipios</label>
-                                        <input id="muni_opt" class="form_radio" type="radio" name="initial_opt">
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="form_taxa">
-                                    <div class="form_input_div">
-                                        
+                    <form class="form">
+                        <div class="form_input_div">
+                            <label for="taxaIMI">Taxa de IMI: </label>
+                            <input id="taxaIMI" class="form_text_input" type="number" step="0.01" required>
 
-                                    </div>
-                                    <div class="form_output_div">
-
-
-                                    </div>
-                                </div>
-                                <div class="form_muni">
-                                    <div class="form_input_div">
-                                        
-
-                                    </div>
-                                    <div class="form_output_div">
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+                            <label for="valorPatrimonial">Valor Patrimonial Tributário: </label>
+                            <input id="valorPatrimonial" class="form_text_input" type="number" step="0.01" required>
+                        </div>
+                        <div class="form_output_div">
+                            <p class="output" id="output"></p>
+                        </div>
+                    </form>
                 </div>
                 <div class="calc_nav">
                     <div>
                         <h3>Outras Calculadoras</h3>
                         <ul class="calc_ul">
+                            <li class="calc_li"><a href="calc_imi.html">IMI</a></li>
                             <li class="calc_li"><a href="calc_juros.html">Juros Compostos</a></li>
                             <li class="calc_li"><a href="calc_pensao.html">Pensão Liquida</a></li>
                             <li class="calc_li"><a href="calc_euribor.html">Variação Euribor</a></li>

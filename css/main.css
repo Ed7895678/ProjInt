@@ -432,73 +432,53 @@ p{
     width: 90%;
     height: 20vh;
 
+    display: flex;
     padding: 1em;
     margin: 3em auto;
-    background-color: var(--dark-color);
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
     color: var(--light-color);
 }
 
-.form_initial_opt{
-    display: flex;
-    align-items: center;
-    padding: 1em;
-    border-bottom: 1px solid var(--light-color);
+.form_input_div{
+    width: 60%;
+    align-content: center;
+
+    border-right: 2px solid var(--primary-color);
 }
 
-.form_initial_opt p{
-    font-size: 1.5em;
-}
-
-.form_radio_div{
-    display: flex;
-    margin-left: 1em;
-}
-
-.form_ind_radio{
-    text-align: center;
-    width: 15vh;
-
-    margin: 0 .2em;
-    padding: .2em;
-
-    cursor: pointer;
-    font-size: 1.5em;
-    border: 2px solid var(--light-color);
-}
-
-.form_ind_radio_div{
-    margin-right: 1em;
-
-    color: var(--light-color);
-    background-color: var(--dark-color);
-    border: 2px solid var(--light-color);
-}
-
-.form_ind_radio_div:hover{
-    color: var(--light-color);
-    background-color: var(--primary-color);
-    border: 2px solid var(--light-color);
-}
-
-.form_radio{
-    width: 0.01px;
+.form_input_label{
+    margin: 1em 0 2em 1em;
 }
 
 .form_label{
-    cursor: pointer;
-
-    width: 14vh;
-    text-align: center;
-    padding: .3em;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
-/* Classes para utilizar com javascript */
+.form_text_input{
+    font-size: 1.5em;
+    margin-left: .5em;
+    text-align: right;
 
-.form_ind_radio_div_checked{
-    color: var(--dark-color);
     background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 2px solid var(--primary-color);
+}
+
+.form_text_input:focus{
+    outline: 0;
     border: 2px solid var(--dark-color);
+}
+
+.form_output_div{
+    width: 40%;
+    align-content: center;
+}
+
+.output{
+    margin-left: 1em;
+    font-size: 3em;
 }
 
 /* Responsividade*/

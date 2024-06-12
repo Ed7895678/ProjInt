@@ -11,7 +11,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../css/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../css/favicon/favicon-16x16.png">
     <link rel="manifest" href="../css/favicon/site.webmanifest">
-</head>
+
+    <script src="../js/logic.js"></script>
 <body>
     <div>
         <header class="header">
@@ -49,16 +50,20 @@
                         <p>O IMT é o imposto pago ao Estado sobre as transmissões onerosas do direito de propriedade, ou seja, é o imposto pago sempre que existe a transmissão financeira de compra e venda de um imóvel no território português.</p>
                         <p>Varia de acordo com o valor de aquisição de escritura do imóvel ou valor patrimonial tributário, a taxa a aplicar, a sua localização e a sua finalidade, podendo existir casos em que está isento do pagamento deste imposto. </p>
                     </div>
-                    <div class="calc_form_div">
-                        <form class="calc_form">
-                            <h4>Formulario:</h4>
-                        </form>
-                    </div>
+                    <form class="form">
+                        <div class="form_input_div">
+                            
+                        </div>
+                        <div class="form_output_div">
+                            <p class="output" id="output"></p>
+                        </div>
+                    </form>
                 </div>
                 <div class="calc_nav">
                     <div>
                         <h3>Outras Calculadoras</h3>
                         <ul class="calc_ul">
+                            <li class="calc_li"><a href="calc_imi.html">IMI</a></li>
                             <li class="calc_li"><a href="calc_juros.html">Juros Compostos</a></li>
                             <li class="calc_li"><a href="calc_pensao.html">Pensão Liquida</a></li>
                             <li class="calc_li"><a href="calc_euribor.html">Variação Euribor</a></li>
