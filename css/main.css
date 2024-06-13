@@ -462,6 +462,7 @@ p{
     font-size: 1.5em;
     margin-left: .5em;
     text-align: right;
+    padding: .2em;
 
     background-color: var(--light-color);
     color: var(--dark-color);
@@ -496,6 +497,13 @@ p{
     border: 2px solid var(--primary-color);
     border-top: 0;
     color: var(--light-color);
+}
+
+#error{
+    color: var(--light-color);
+    align-self: center;
+    margin-left: 2em;
+    font-size: 1.3em;
 }
 
 /* Responsividade*/

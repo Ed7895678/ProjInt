@@ -51,12 +51,27 @@
                     </div>
                     <form class="form">
                         <div class="form_input_div">
-                            
+                            <div class="form_input_label">
+                                <label class="form_label" for="pensaoBruta">Pensão Bruta: </label><br>
+                                <input id="pensaoBruta" class="form_text_input" type="number" step="0.01" required oninput="calcularPensao()">
+                            </div>
+                            <div class="form_input_label">
+                                <label class="form_label" for="taxaIrs">Percentagem de IRS: </label><br>
+                                <input id="taxaIrs" class="form_text_input" type="number" step="0.01" required oninput="calcularPensao()">
+                            </div>
+                            <div class="form_input_label">
+                                <label class="form_label" for="taxaSS">Percentagem de Segurança Social: </label><br>
+                                <input id="taxaSS" class="form_text_input" type="number" step="0.01" required oninput="calcularPensao()">
+                            </div>
                         </div>
                         <div class="form_output_div">
+                            <p class="output">Pensão Liquida: XXX</p>
                             <p class="output" id="output"></p>
                         </div>
                     </form>
+                    <div class="form_validation">
+                        <p id="error">Preencha todos os campos de input.</p>
+                    </div>
                 </div>
                 <div class="calc_nav">
                     <div>

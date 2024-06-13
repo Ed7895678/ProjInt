@@ -42,7 +42,7 @@
             </ul>
         </header>
 
-        <main class="calc_hero">
+        <main class="calc_hero" style="height: 100vh;">
             <div class="flex calc_cont">
                 <div class="calc_main">
                     <div class="calc_text">
@@ -52,12 +52,33 @@
                     </div>
                     <form class="form">
                         <div class="form_input_div">
-                            
+                            <div class="form_input_label">
+                                <label class="form_label" for="valorImovel">Valor do imóvel: </label><br>
+                                <input id="valorImovel" class="form_text_input" type="number" step="0.01" min="0" required oninput="calcularIMT()">
+                            </div>
+                            <div class="form_input_label">
+                                <label class="form_label" for="tipoHabitacao">Finalidade do imóvel: </label><br>
+                                <select class="form_text_input" name="tipoHabitacao" id="tipoHabitacao" oninput="calcularIMT()">
+                                    <option value="propria_permanente">Habitação Própria Permanente</option>
+                                    <option value="secundaria">Habitação Secundaria ou Arrendamento</option>
+                                </select>
+                            </div>
+                            <div class="form_input_label">
+                                <label class="form_label" for="localizacao">Localização do imóvel: </label><br>
+                                <select class="form_text_input" name="localizacao" id="localizacao" oninput="calcularIMT()">
+                                    <option value="portugal_continental">Portugal Continental</option>
+                                    <option value="regiao_autonoma">Regiões Autónomas</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form_output_div">
+                            <p class="output">Valor de IMT: XXX</p>
                             <p class="output" id="output"></p>
                         </div>
                     </form>
+                    <div class="form_validation">
+                        <p id="error">Preencha todos os campos de input.</p>
+                    </div>
                 </div>
                 <div class="calc_nav">
                     <div>

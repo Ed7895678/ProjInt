@@ -52,12 +52,27 @@
                     </div>
                     <form class="form">
                         <div class="form_input_div">
-                            
+                            <div class="form_input_label">
+                                <label class="form_label" for="valorInicial">Valor Inicial: </label><br>
+                                <input id="valorInicial" class="form_text_input" type="number" step="0.01" min="0" required oninput="calcularJuros()">
+                            </div>
+                            <div class="form_input_label">
+                                <label class="form_label" for="jurosMensal">Taxa de Juro Mensal: </label><br>
+                                <input id="jurosMensal" class="form_text_input" type="number" step="0.01" min="0" required oninput="calcularJuros()">
+                            </div>
+                            <div class="form_input_label">
+                                <label class="form_label" for="numMeses">Numero de Meses: </label><br>
+                                <input id="numMeses" class="form_text_input" type="number" step="0.01" min="0" required oninput="calcularJuros()">
+                            </div>
                         </div>
                         <div class="form_output_div">
+                            <p class="output">Montante Final:</p>
                             <p class="output" id="output"></p>
                         </div>
                     </form>
+                    <div class="form_validation">
+                        <p id="error">Preencha todos os campos de input.</p>
+                    </div>
                 </div>
                 <div class="calc_nav">
                     <div>

@@ -53,23 +53,24 @@
                         <div class="form_input_div">
                             <div class="form_input_label">
                                 <label class="form_label" for="remuneracao">Remuneração Mensal (euros): </label><br>
-                                <input id="remuneracao" class="form_text_input" type="number" step="0.01" min="0" required onchange="calcularSalario()">
+                                <input id="remuneracao" class="form_text_input" type="number" step="0.01" min="0" required oninput="calcularSalario()">
                             </div>
                             <div class="form_input_label">
                                 <label class="form_label" for="perIRS">Percentagem de IRS: </label><br>
-                                <input id="perIRS" class="form_text_input" type="number" step="0.01" min="0" required onchange="calcularSalario()">
+                                <input id="perIRS" class="form_text_input" type="number" step="0.01" min="0" required oninput="calcularSalario()">
                             </div>
                             <div class="form_input_label">
                                 <label class="form_label" for="perSS">Percentagem de Segurança Social: </label><br>
-                                <input id="perSS" class="form_text_input" type="number" step="0.01" min="0" required value="11" onchange="calcularSalario()">
+                                <input id="perSS" class="form_text_input" type="number" step="0.01" min="0" required value="11" oninput="calcularSalario()">
                             </div>
                         </div>
                         <div class="form_output_div">
-                            <p class="output" id="output">Output</p>
+                            <p class="output">Salario Liquido:</p>
+                            <p class="output" id="output"></p>
                         </div>
                     </form>
                     <div class="form_validation">
-                        <p>Mensagem de Erro</p>
+                        <p id="error">Preencha todos os campos de input.</p>
                     </div>
                 </div>
                 <div class="calc_nav">
