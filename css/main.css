@@ -80,6 +80,10 @@ p{
     justify-content: space-evenly;
 }
 
+.header_title_div a{
+    text-decoration: none;
+}
+
 .header_title{
     font-size: 8vh;
     color: var(--light-color);
@@ -599,49 +603,5 @@ p{
     .fullHeight{
         display: block;
     }
-    
 }
 
-/* Calculadoras Page */
-
-@media screen and (max-width: 1200px){
-    .card_main{
-        height: 100vh;
-    }
-}
-
-@media screen and (max-width: 860px){
-    .card_main{
-        height: 140vh;
-    }
-}
-
-@media screen and (max-width: 580px){
-    .card_main{
-        height: 280vh;
-    }
-}
-
-/* Calculadoras Especificas */
-
-@media screen and (max-width: 910px){    
-    .calc_hero{
-        height: 160vh;
-    }
-
-    .calc_main{
-        width: 95%;
-    }
-
-    .calc_cont{
-        display: block;
-    }
-
-    .calc_nav{
-        height: 70vh;
-        width: 80%;
-        text-align: center;
-
-        margin: 3em auto;
-    }
-}

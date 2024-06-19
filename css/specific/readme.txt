@@ -1,0 +1,1 @@
+Css especifico de cada pagina + responsividade

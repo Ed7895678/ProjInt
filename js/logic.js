@@ -180,25 +180,33 @@ function calcularSalario() {
 
 // Função para calcular a Pensao Liquida
 function calcularPensao() {
-    let pensaoBruta = parseFloat(document.getElementById('pensaoBruta').value);
-    let taxaIrs = parseFloat(document.getElementById('taxaIrs').value);
-    let taxaSS = parseFloat(document.getElementById('taxaSS').value);
-    
-    console.log(pensaoBruta)
-    console.log(taxaIrs)
-    console.log(taxaSS)
+    let impostoRenda = 0;
+    let contribuicaoPrevidenciaria = 0;
+    let outrasDeducoes = 0;
+
+    let pensaoBruta = document.getElementById("pensaoBruta").value;
+    let localizacao = document.getElementById("localizacao").value;
+    let dependentes = document.getElementById("dependentes").value;
+    let dependentesDeficiencia = document.getElementById("dependentesDeficiencia").value;
+    let parcelaAbater = document.getElementById("parcelaAbater").value;
+
     // Validação 
-    if(isNaN(pensaoBruta) || isNaN(taxaIrs) || isNaN(taxaSS)){
+    if(isNaN(pensaoBruta) || localizacao == "" || isNaN(dependentes) || isNaN(dependentesDeficiencia) || isNaN(parcelaAbater)){
         document.getElementById("error").innerHTML = "Preencha todos os campos de input."
         document.getElementById("output").innerText = "";
     } else {
-        document.getElementById("error").innerHTML = ""
-    // Calculo
-        let desconto = (pensaoBruta * (taxaIrs / 100)) + (pensaoBruta * (taxaSS / 100));
-        let output = (pensaoBruta - desconto).toFixed(2)
-        document.getElementById("output").innerText = output + "€";
-    }
+
+        if (localizacao === 'continental') {
+            impostoRenda = pensaoBruta * 0.15 - parcelaAbater;
+        } else {
+            impostoRenda = pensaoBruta * 0.12 - parcelaAbater;
+        }
+        contribuicaoPrevidenciaria = pensaoBruta * 0.11;
+        outrasDeducoes = dependentes * 50 + dependentesDeficiencia * 100;
     
+        let output = (pensaoBruta - (impostoRenda + contribuicaoPrevidenciaria + outrasDeducoes));
+        document.getElementById("output").innerHTML = output + "€";
+    }
 }
 
 

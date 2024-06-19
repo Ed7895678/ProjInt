@@ -1,0 +1,22 @@
+/* Responsividade*/
+
+/* Calculadoras */
+/* Responsividade até 500px, abaixo de 500px varios elementos da pagina quebram */
+
+@media screen and (max-width: 1200px){
+    .card_main{
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 860px){
+    .card_main{
+        height: 140vh;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .card_main{
+        height: 280vh;
+    }
+}

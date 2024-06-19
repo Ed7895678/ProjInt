@@ -1,0 +1,94 @@
+/* Responsividade*/
+
+/* Home page */
+/* Responsividade até 500px, abaixo de 500px varios elementos da pagina quebram */
+
+@media screen and (max-width: 1200px){
+    .main_text_div a{
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 910px){    
+    .header_flex{
+        padding: .3em;
+    }
+    
+    .header{
+        height: 17vh;
+        padding: .5em;
+        display: block;
+        border: 0;
+    }
+
+    .header_title{
+        font-size: 6vh;
+    }
+
+    .header_nav a, .header_nav li{
+        padding: 0;
+    }
+
+    .header_nav{
+        border-top: 2px solid var(--dark-color);
+        border-bottom: 2px solid var(--dark-color);
+        align-content: center;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    .header_menu a{
+        padding: .5em;
+    }
+
+    .main{
+        height: 120vh;
+    }
+
+    .main_hero_div{
+        width: 100%;
+    }
+
+    .main_text_div{
+        width: 100%;
+    }
+
+    .main_text_div h2{
+        margin: 0 0 0 .5em;
+        font-size: 10vh;
+    }
+
+    .main_text_div ul{
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+    .main_btn_div{
+        margin-top: 8em;
+        display: flex;
+        height: 20vh;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+    }
+
+    .main_btn{
+        margin: 0;
+    }
+
+    .main_form_div{
+        width: 90%;
+        margin: 4em auto;
+    }
+
+    .footer p{
+        font-size: 1em;
+    }
+}
+
+/* Hero div e Form em cima do outro */
+@media screen and (max-width: 700px){
+    .fullHeight{
+        display: block;
+    }
+}

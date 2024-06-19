@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/specific/calc_pensao.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="../css/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../css/favicon/favicon-32x32.png">
@@ -18,20 +19,24 @@
         <header class="header">
             <div class="header_flex">
                 <div class="header_logo_div">
-                    <img class="header_logo" src="../css/favicon/android-chrome-512x512.png" alt="logotipo">
+                    <a href="home.html">
+                        <img class="header_logo" src="../css/favicon/android-chrome-512x512.png" alt="logotipo">
+                    </a>
                 </div>
                 <div class="header_title_div">
-                    <h1 class="header_title">Doutor Das Finanças</h1>
+                    <a href="home.html">
+                        <h1 class="header_title">Doutor Das Finanças</h1>
+                    </a>
                 </div>
             </div>
             <ul class="header_nav">
                 <li><a href="home.html">Home</a></li>
                 <li class="header_dropdown">
-                    <a href="#">Calculadoras</a>
+                    <a href="calculadoras.html">Calculadoras</a>
                     <div class="header_menu">
                         <a href="calc_imi.html">IMI</a>
                         <a href="calc_juros.html">Juros Compostos</a>
-                        <a href="calc_euribor.html">Variação Euribor</a>
+                        <a href="calc_euribor.html">Taxa Euribor</a>
                         <a href="calc_salario.html">Salario Liquido</a>
                         <a href="calc_imt.html">IMT</a>
                         <a href="calc_pensao.html">Pensão Liquida</a>
@@ -51,21 +56,36 @@
                     </div>
                     <form class="form">
                         <div class="form_input_div">
-                            <div class="form_input_label">
-                                <label class="form_label" for="pensaoBruta">Pensão Bruta: </label><br>
-                                <input id="pensaoBruta" class="form_text_input" type="number" step="0.01" required oninput="calcularPensao()">
+                            <div class="form_input_div_parts">
+                                <div class="form_input_label">
+                                    <label class="form_label" for="pensaoBruta">Pensão Bruta (€):</label><br>
+                                    <input id="pensaoBruta" class="form_text_input" type="number" required oninput="calcularPensao()">
+                                </div>
+                                <div class="form_input_label">
+                                    <label class="form_label" for="localizacao">Localização:</label><br>
+                                    <select id="localizacao" class="form_text_input" required oninput="calcularPensao()">
+                                        <option value="continental">Portugal Continental</option>
+                                        <option value="ilhas">Ilhas</option>
+                                    </select>
+                                </div>
+                                <div class="form_input_label">
+                                    <label class="form_label" for="dependentes">Número de Dependentes:</label><br>
+                                    <input id="dependentes" class="form_text_input" type="number" required oninput="calcularPensao()">
+                                </div>
                             </div>
-                            <div class="form_input_label">
-                                <label class="form_label" for="taxaIrs">Percentagem de IRS: </label><br>
-                                <input id="taxaIrs" class="form_text_input" type="number" step="0.01" required oninput="calcularPensao()">
+                            <div class="form_input_div_parts">
+                                <div class="form_input_label">
+                                    <label class="form_label" for="dependentesDeficiencia">Número de Dependentes com Deficiência:</label><br>
+                                    <input id="dependentesDeficiencia" class="form_text_input" type="number" required oninput="calcularPensao()">
+                                </div>
+                                <div class="form_input_label">
+                                    <label class="form_label" for="parcelaAbater">Parcela a Abater (€):</label><br>
+                                    <input id="parcelaAbater" class="form_text_input" type="number" required oninput="calcularPensao()">
+                                </div>
                             </div>
-                            <div class="form_input_label">
-                                <label class="form_label" for="taxaSS">Percentagem de Segurança Social: </label><br>
-                                <input id="taxaSS" class="form_text_input" type="number" step="0.01" required oninput="calcularPensao()">
-                            </div>
-                        </div>
+                        </div>    
                         <div class="form_output_div">
-                            <p class="output">Pensão Liquida: XXX</p>
+                            <p class="output">Pensão Liquida:</p>
                             <p class="output" id="output"></p>
                         </div>
                     </form>
@@ -93,9 +113,9 @@
                 </div>
             </div>
             
-        </main>
-
-        <footer class="footer">
+            <footer class="footer">
+                <p>Eduardo Santos nº23791 | Guilherme Dias nº26255 | Guilherme Nobre nº26169 | <a href="#">Contacte-nos</a></p>
+            </footer>
             
         </footer>
     </div>    
