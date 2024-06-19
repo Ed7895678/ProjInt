@@ -12,6 +12,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../css/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../css/favicon/favicon-16x16.png">
     <link rel="manifest" href="../css/favicon/site.webmanifest">
+
+    <script src="../js/logic.js"></script>
 </head>
 <body>
     <div>
@@ -35,7 +37,7 @@
                     <div class="header_menu">
                         <a href="calc_imi.html">IMI</a>
                         <a href="calc_juros.html">Juros Compostos</a>
-                        <a href="calc_euribor.html">Taxa Euribor</a>
+                        <a href="calc_euribor.html">Prestações</a>
                         <a href="calc_salario.html">Salario Liquido</a>
                         <a href="calc_imt.html">IMT</a>
                         <a href="calc_pensao.html">Pensão Liquida</a>
@@ -56,7 +58,7 @@
                             <li><a href="calc_imi.html">IMI</a></li>
                             <li><a href="calc_juros.html">Juros Compostos</a></li>
                             <li><a href="calc_valias.html">Mais Valias</a></li>
-                            <li><a href="calc_euribor.html">Taxa Euribor</a></li>
+                            <li><a href="calc_euribor.html">Prestações do Crédito Habitação</a></li>
                             <li><a href="calculadoras.html">E mais...</a></li>
                         </ul>
                     </div>
@@ -68,9 +70,17 @@
                     <form class="main_form">
                         <div class="main_form_text">
                             <h3>Alguma Duvida? <br> Contacte-nos através do nosso e-mail!</h3>
-                        </div>
-                        <div class="main_form_input">
-
+                            <div class="main_form_input_div">
+                                <h4 class="main_form_label">Assunto:</h4>
+                                <input class="main_form_input" id="assunto" type="text">
+                            </div>
+                            <div class="main_form_input_div">
+                                <h4 class="main_form_label">Mensagem:</h4>
+                                <textarea class="main_form_textarea" id="mensagem" type="text" ></textarea>
+                            </div>
+                            <div>
+                                <a class="main_btn_small" onclick="submeterEmail()">Enviar</a>
+                            </div>
                         </div>
                     </form>
                 </div>

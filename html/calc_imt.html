@@ -36,7 +36,7 @@
                     <div class="header_menu">
                         <a href="calc_imi.html">IMI</a>
                         <a href="calc_juros.html">Juros Compostos</a>
-                        <a href="calc_euribor.html">Taxa Euribor</a>
+                        <a href="calc_euribor.html">Prestações</a>
                         <a href="calc_salario.html">Salario Liquido</a>
                         <a href="calc_imt.html">IMT</a>
                         <a href="calc_pensao.html">Pensão Liquida</a>
@@ -58,26 +58,26 @@
                     <form class="form">
                         <div class="form_input_div">
                             <div class="form_input_label">
-                                <label class="form_label" for="valorImovel">Valor do imóvel: </label><br>
-                                <input id="valorImovel" class="form_text_input" type="number" step="0.01" min="0" required oninput="calcularIMT()">
+                                <label class="form_label" for="precoImovel">Valor do imóvel: </label><br>
+                                <input id="precoImovel" class="form_text_input" type="number" step="0.01" min="0" required oninput="calcularIMT()">
                             </div>
                             <div class="form_input_label">
-                                <label class="form_label" for="tipoHabitacao">Finalidade do imóvel: </label><br>
-                                <select class="form_text_input" name="tipoHabitacao" id="tipoHabitacao" oninput="calcularIMT()">
+                                <label class="form_label" for="finalidadeImovel">Finalidade do imóvel: </label><br>
+                                <select class="form_text_input" name="finalidadeImovel" id="finalidadeImovel" oninput="calcularIMT()">
                                     <option value="propria_permanente">Habitação Própria Permanente</option>
                                     <option value="secundaria">Habitação Secundaria ou Arrendamento</option>
                                 </select>
                             </div>
                             <div class="form_input_label">
-                                <label class="form_label" for="localizacao">Localização do imóvel: </label><br>
-                                <select class="form_text_input" name="localizacao" id="localizacao" oninput="calcularIMT()">
-                                    <option value="portugal_continental">Portugal Continental</option>
-                                    <option value="regiao_autonoma">Regiões Autónomas</option>
+                                <label class="form_label" for="localImovel">Localização do imóvel: </label><br>
+                                <select class="form_text_input" name="localImovel" id="localImovel" oninput="calcularIMT()">
+                                    <option value="portugal">Portugal Continental</option>
+                                    <option value="regioes">Regiões Autónomas</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form_output_div">
-                            <p class="output">Valor de IMT: XXX</p>
+                            <p class="output">Valor de IMT: </p>
                             <p class="output" id="output"></p>
                         </div>
                     </form>
@@ -92,7 +92,7 @@
                             <li class="calc_li"><a href="calc_imi.html">IMI</a></li>
                             <li class="calc_li"><a href="calc_juros.html">Juros Compostos</a></li>
                             <li class="calc_li"><a href="calc_pensao.html">Pensão Liquida</a></li>
-                            <li class="calc_li"><a href="calc_euribor.html">Variação Euribor</a></li>
+                            <li class="calc_li"><a href="calc_euribor.html">Prestações</a></li>
                             <li class="calc_li"><a href="calc_imt.html">IMT</a></li>
                             <li class="calc_li"><a href="calc_esforco.html">Taxa de Esforço</a></li>
                             <li class="calc_li"><a href="calc_valias.html">Mais Valias</a></li>

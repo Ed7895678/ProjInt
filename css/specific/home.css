@@ -42,7 +42,7 @@
     }
 
     .main{
-        height: 120vh;
+        height: 100vh;
     }
 
     .main_hero_div{
@@ -84,11 +84,21 @@
     .footer p{
         font-size: 1em;
     }
+
+
+    .main_form_label, .main_form_input, .main_form_textarea{
+        text-align: center;
+        width: 100%;
+    }
 }
 
 /* Hero div e Form em cima do outro */
 @media screen and (max-width: 700px){
     .fullHeight{
         display: block;
+    }
+
+    .main{
+        height: 170vh;
     }
 }

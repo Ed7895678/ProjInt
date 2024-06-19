@@ -215,6 +215,24 @@ p{
     background-color: var(--primary-color);
 }
 
+.main_btn_small{
+    padding: .5em;
+    cursor: pointer;
+
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    font-size: 2em;
+    text-decoration: none;
+
+    transition: all 0.5s;
+}
+
+.main_btn_small:hover{
+    transform: scale(1.1);
+    text-decoration: underline;
+    background-color: var(--primary-color);
+}
+
 .main_form_div{
     width: 40%;
     align-content: center;
@@ -231,6 +249,28 @@ p{
     height: 90%;
     width: 90%;
     margin: auto;
+}
+
+.main_form_input_div{
+    margin: .5em;
+    padding: 1em;
+}
+
+.main_form_label{
+    font-size: 2em;
+}
+
+.main_form_input{
+    font-size: 1.5em;
+    width: 60%;
+    margin: 1em 0;
+}
+
+.main_form_textarea{
+    font-size: 1.5em;
+    margin: auto;
+    width: 90%;
+    height: 20vh;
 }
 
 
